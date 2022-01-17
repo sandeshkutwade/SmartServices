@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(to right, #dbe6f6, #c5796d 100%);
+
+    }
+
+    h1,
+    h3 {
+        margin-top: 80px;
+        text-align: center;
+        font-family: Luminari;
+        color: rgb(97, 95, 95);
+
+    }
+
+    .flip-box {
+        background-color: transparent;
+        width: 450px;
+        height: 200px;
+        perspective: 10000px;
+        float: left;
+        margin-left: 3%;
+        margin-top: 120px;
+
+    }
+
+    .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+
+    }
+
+    .flip-box:hover .flip-box-inner {
+        transform: rotateX(180deg);
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    }
+
+    .flip-box-front {
+        background-image: linear-gradient(to right, #00bf8f, #001510 100%);
+        color: rgb(255, 255, 255);
+        font-family: Gabriola;
+        font-size: 25px;
+    }
+
+    .flip-box-back {
+        background-image: linear-gradient(to right, #00bf8f, #001510 100%);
+        color: rgb(255, 255, 255);
+        transform: rotateX(180deg);
+        text-align: center;
+        font-family: cursive;
+        font-family: Gabriola;
+        font-size: 20px;
+
+    }
+</style>
+
+<body>
+    <h1>Contact Smart-Services</h1>
+    <h3>We all Are Connected</h3>
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <h2> <i class="fa fa-map-marker" style="font-size:48px;color:rgb(255, 255, 255)"></i>
+                    <br>
+
+
+                    Address
+                </h2>
+            </div>
+            <div class="flip-box-back">
+                <br><br>
+
+                <h2> Sangli</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <h2>
+                    <i class="fa fa-phone" style="font-size:48px;color:rgb(255, 255, 255)"></i>
+                    <br>
+
+
+                    Phone
+
+                </h2>
+            </div>
+            <div class="flip-box-back">
+                <br>
+
+                <h2> 8329558998 </h2>
+                <h2> 8249558998 </h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flip-box">
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <h2>
+                    <i class='fa fa-bell' style='font-size:48px;color:rgb(255, 255, 255)'></i>
+                    <br>
+
+                    Accounts
+                </h2>
+            </div>
+            <div class="flip-box-back">
+                <h2> instagram :- kutwadesandesh
+                    <br>
+                    <br>
+                    Gamil :- sandeshkutwade6@gmail.com
+                </h2>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

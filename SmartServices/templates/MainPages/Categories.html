@@ -1,0 +1,121 @@
+{% extends '../HeaderBase.html' %}
+{% load static %}
+{%block title%} Services Page {%endblock%}
+{% block Main_Content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Services Section</title>
+  <!-- Font Awesome CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+</head>
+<style>
+  h1{
+    text-align: center;
+    text-transform:capitalize;
+    color: white;
+    font-family:Goudy Old Style;
+  }
+  .card {
+    box-sizing: border-box;
+  
+    float: left;
+    width: calc(25% - 20px);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    height: 200px;
+    transition: transform 400ms;
+    background-color: #7a7adb;
+    background-image: linear-gradient(315deg, #ddd6f3 ,#f7bcb9f6 84%);
+
+  }
+
+  .card:hover {
+    transform: translateY(-15px);
+    background-color: #d2a813;
+    background-image: linear-gradient(315deg,#ee9ca7 , #ffdde1 74%);
+    cursor: pointer;
+  }
+
+  .card h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 80px;
+
+  }
+
+  .card a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Perpetua;
+  }
+
+  .cardContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .card {
+      width: 95%;
+    }
+  }
+</style>
+
+
+<body>
+  <h1> We’re here when you need us most.</h1>
+  {% for C in categories %}
+  <div class="cardContainer">
+    <div class="card">
+      <h2><a href="{{ C.get_absolute_url }}"> {{ C.Name|title }} </a></h2>
+
+    </div>
+    {% endfor %}
+    <!--     
+  <section>
+   
+    <div class="row">
+      <h2 class="section-heading">Our Services</h2>
+    </div>
+
+    <div class="row">
+      {% for C in categories %}
+    
+      <div class="column">
+        
+        <div class="card">
+          
+   
+            
+          
+           
+                
+          <li>
+            <h1><a href="{{ C.get_absolute_url }}"> {{ C.Name|title }} </a></h1>
+          </li>
+          <!-- Service Heading</h3> -->
+
+
+    <!-- </div>
+        
+      </div>
+      {% endfor %}
+    </div>
+  
+    </div> -->
+
+    <!-- </section> -->
+
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,221 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Responsive Header</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+</head>
+<style>
+  body {
+    margin: 0px;
+    margin-top: 0px;
+    background-image: radial-gradient(circle 759px at -6.7% 50%, rgba(80, 131, 73, 1) 0%, rgba(140, 209, 131, 1) 26.2%, rgba(178, 231, 170, 1) 50.6%, rgba(144, 213, 135, 1) 74.1%, rgba(75, 118, 69, 1) 100.3%)
+  }
+
+  #header {
+    width: 100%;
+    float: left;
+    text-align: center;
+    /* background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% ); */
+  }
+
+  #logo {
+    width: 30%;
+    float: left;
+  }
+
+  #logo h1 {
+    cursor: pointer;
+    transition: 1s;
+    color: white;
+    font-family: cambria;
+  }
+
+  #logo h1:hover {
+    color: black;
+  }
+
+  h4 {
+    cursor: pointer;
+    transition: 1s;
+    color: rgb(255, 255, 255);
+    font-family: cambria;
+  }
+
+
+
+
+  #menu {
+    float: left;
+    width: 70%;
+  }
+
+  #menu ul {
+    margin-right: 10%;
+    padding: 0;
+    float: right;
+    text-align: center;
+  }
+
+  #menu ul li {
+    cursor: pointer;
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px;
+  }
+
+  #menu ul li a {
+    font-family: cambria;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  #menu ul li a:hover {
+    color: black;
+  }
+
+
+  /* Responsive CSS */
+
+  @media only screen and (max-width: 590px) {
+    #header {
+      font-size: 14px;
+    }
+
+    #logo {
+      width: 100%;
+      float: left;
+      text-align: center;
+    }
+
+    #menu {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    #menu ul {
+      float: none;
+      margin-right: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    #header {
+      font-size: 12px;
+    }
+
+    #logo h1 {
+      margin-bottom: 1%;
+
+    }
+
+    #menu ul li {
+      display: block;
+    }
+  }
+
+
+
+
+
+
+
+
+  /* Middle Content */
+
+
+
+  .c2 {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 180px 0;
+    margin: 0px;
+    /* background-color #55efc4; */
+    background-image: linear-gradient(315deg,#FFFEFF , #D7FFFE
+);
+    margin-top: 80px;
+    margin-left: 5px;
+
+
+  }
+
+  .c3 {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    text-align: center;
+    padding: 180px 0;
+    background-color: #44355b;
+    background-image: linear-gradient(315deg, #44355b 0%, #ececec 74%);
+    margin: 0px;
+    margin-top: 80px;
+    margin-left: 2px;
+
+  }
+
+
+
+  @media only screen and (max-width: 660px) {
+    .c2 {
+      width: 100%;
+    }
+
+    .c3 {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+</style>
+
+<body>
+  <div id="header">
+    {% if user.is_authenticated %}
+    <div id="logo">
+      <h1>SmartServices</h1>
+    </div>
+    
+    <div id="menu">
+     
+      <ul>
+        <li> <a href="/try/">Home</a></li>
+        <li> <a href="{% url 'SmartServices:HirePage' %}">Services</a></li>
+        <li> <a href="{% url 'SmartServices:form' %}">Partner</a></li>
+        <li> <a href="{% url 'SmartServices:logout' %}"> Log_Out</a></li>
+        <li>
+
+          <h4> Hello, {{request.user}}</h4>
+        </li>
+        {% for message in messages %}
+        <p id="messages">{{message}}</p>
+        {% endfor %}
+
+      </ul>
+     
+    </div>
+    
+  </div>
+  {% endif %}
+
+
+
+   Middle Content -->
+<!-- 
+  <div class="2col">
+    <div class="c2">Content Area 2</div>
+    <div class="c3">Content Area 3</div>
+  </div>
+
+
+
+
+
+   Footer Desing -->
+
+
+<!-- </body>
+
+</html>  -->

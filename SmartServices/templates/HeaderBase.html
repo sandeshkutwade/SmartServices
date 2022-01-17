@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'HeaderBase11.css' %}" type="text/css">
+    <title>{% block title %}Smart-Services{% endblock %}</title>
+
+</head>
+
+<body>
+    <div id="header">
+        {% if user.is_authenticated %}
+        <div id="logo">
+            <h1>SmartServices</h1>
+        </div>
+
+        <div id="menu">
+
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="{% url 'SmartServices:HirePage' %}">Services</a></li>
+                <li> <a href="{% url 'SmartServices:form' %}">Partner</a></li>
+                <li> <a href="{% url 'SmartServices:logout' %}"> Log_Out</a></li>
+                <li>
+
+                    <h4> Hello, {{request.user}}</h4>
+                </li>
+                {% comment %} {% for message in messages %}
+                <p id="messages">{{message}}</p>
+                {% endfor %} {% endcomment %}
+
+            </ul>
+           
+
+        </div>
+     
+
+    </div>
+
+
+    {% block Main_Content %}
+
+    <div class="row">
+        <div class="column">
+            <h2>Site Dashboard</h2>
+            <hr>
+            <br>
+            <p> Users = {{ Countuser }}</p>
+
+            <p> Employees = {{ partners }} </p>
+            <p> Complete Work = {{ Ordercount }} +</p>
+
+        </div>
+        <div class="column">
+            <h2> Satisfied Customer Feedback</h2>
+            <hr><br>
+            <p>Got it. Excellent job! Everything works perfectly! Thanks! </p>
+            <h4>Rajesh Shaha</h4>
+
+            <p> Good Site To hire employees, Thanks! </p>
+            <h4>Minal Mohite</h4>
+
+            <p> Need More Category & employees options </p>
+            <h4>Sumit Kale</h4>
+
+        </div>
+    </div>
+
+
+    {% endblock Main_Content %}
+
+
+    {% else %}
+
+
+    <div id="logo">
+        <h1>SmartServices</h1>
+
+    </div>
+
+    <div id="menu">
+
+        <ul>
+            <li> <a href="/">Home</a></li>
+            <li> <a href="{% url 'SmartServices:HirePage' %}">Services</a></li>
+            <li> <a href="{% url 'SmartServices:form' %}">Partner</a></li>
+            <li> <a href="{% url 'SmartServices:logout' %}"> Log_in</a></li>
+            <li>
+                <h4> Welcome...</h4>
+               
+            </li>
+          
+           
+    </div>
+  
+
+    <div class="About">
+        <h3> Welcome To The Smart-Services </h3>
+        <!-- <h3> Smart-Services Works For You.</h3> -->
+        <p>
+            After the Corona epidemic you see that you have no workers to do your job.
+            Even during these illnesses, you have to go out and look for workers every time.But you still don't get any workers.
+            If you get a worker, he asks for a lot of money more than that work value.
+            <br><br>
+            With the help of &nbsp; <span>  Smart-Services  </span>  &nbsp;  you don't have to go out and find employees to do your work.
+            We help you find the right staff for your job.
+            There is no bargaining system on this site, labor rates are fixed and we are concerned about it.
+            We offer you more than 10 services right now.
+            We also provide more than 5 employees and their information in each service.
+            You have the freedom to choose the particular staff you want for your job.
+            The registration and login process is quite simple.
+            We offer you one click hire facility you just have to visit our site, find your services and check different
+            workers and just click on hire button. And the staff will reach you in the allotted time.
+
+        </p>
+    </div>
+
+
+    {% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to right, #434343 0%, black 100%);
+    }
+
+    .card {
+        color: white;
+        margin: auto;
+        width: 60%;
+        height: 250px;
+        border: 3px solid #f7f7f7;
+        /* padding: 10px; */
+        margin-top: 280px;
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 5px 10px #31df57;
+        background-image: linear-gradient(to right, #2af598, #009efd);
+
+        text-align: center;
+    }
+
+    .card p {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 29px;
+        color: rgb(0, 0, 0);
+    }
+
+    a {
+        color: rgb(0, 0, 0);
+    }
+
+    @media screen and (max-width: 600px) {
+        .card {
+            width: 100%;
+            margin-left: 1px;
+
+        }
+
+    }
+</style>
+
+<body>
+    <div class="card">
+        <h2> &#10004;</h2>
+        <h2> Hire</h2>
+        <p>Employee Hire Succesfully !</p>
+
+        <a href="{% url 'SmartServices:home' %}"> Click Here To Go Home Page</a>
+    </div>
+
+
+    <!-- <div class="custom-modal">
+        <div class="succes succes-animation icon-top"> Hire</div>
+        <div class="succes border-bottom"></div>
+        <div class="content">
+            <p class="type">Click On Below Link To Go Home</p>
+            <p class="message-type"> <a href="{% url 'SmartServices:home' %}" class="ml-2">Succesfully Hire</p></a>
+        </div>
+
+    </div> -->
+
+</body>
+
+</html>
