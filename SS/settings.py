@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '5559ii5sea1p)vva34pmv(a98czell-qhg6+1-o3)a)@jn6g#d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','smartservicesss.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -46,13 +46,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     
 ]
 
@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
 ]
 
 
-STATICFILES_STOREAGE =' whitenoise.storage.CompressedManifestStaticFileStorage'
+STATICFILES_STOREAGE =' whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
@@ -151,3 +151,4 @@ EMAIL_HOST_PASSWORD = 'Sid12233#'
 
 
 django_heroku.settings(locals())
+
