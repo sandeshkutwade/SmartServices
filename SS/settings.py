@@ -29,7 +29,7 @@ SECRET_KEY = '5559ii5sea1p)vva34pmv(a98czell-qhg6+1-o3)a)@jn6g#d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','smartservicesss.herokuapp.com']
 
 
 # Application definition
